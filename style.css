@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: #121212;
+  color: #fafafa;
+  font-family: "Monoton", cursive;
+  margin: 0 0 -100px 0;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 767px) {
+  body {
+    padding: 0 20px;
+  }
+}
+header {
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+@media (max-width: 767px) {
+  header {
+    opacity: 1;
+  }
+}
+header.showing {
+  opacity: 1;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  header.showing {
+    opacity: 1;
+  }
+}
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    -webkit-animation-name: nameEnter;
+    animation-name: nameEnter;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+  }
+}
+h1 span.title {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  h1 span.title {
+    margin-top: 30px;
+  }
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  ul {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+li {
+  font-size: 0.6rem;
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  li {
+    font-size: 1.8rem;
+    min-height: initial;
+    margin: 20px 0;
+    line-height: 1.2;
+  }
+}
+li a {
+  opacity: 0;
+  color: #fafafa;
+  pointer-events: none;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  li a {
+    opacity: 1;
+    pointer-events: auto;
+    display: block;
+    text-align: center;
+  }
+}
+li.showing a {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+a.email-showing {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 767px) {
+  #four a span {
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+}
